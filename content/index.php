@@ -43,15 +43,23 @@ mysqli_close($link);
 
 <body>
     <div class="container">
-        <h2>Content Uploaded by You</h2>
+        <nav class="display-4 navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse " style="gap:10px; justify-content: center;" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="gap:20px;">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="./content/">Content</a>
+                    <a class="nav-item nav-link" href="#">Feedback</a>
+                    <a class="nav-item nav-link" href="#">Analytics</a>
+                </div>
+            </div>
+        </nav>
+        <h2 class="mt-5 text-center mb-5">Content Uploaded by You</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                    <th>File path</th>
                     <th>Upload date</th>
+                    <th>Links</th>
                     <!-- Add more columns as needed -->
                 </tr>
             </thead>
@@ -59,19 +67,14 @@ mysqli_close($link);
                 <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                     <tr>
                         <td><?php echo $row["Title"]; ?></td>
-                        <td><?php echo $row["Type"]; ?></td>
-                        <td><?php echo $row["Description"]; ?></td>
-                        <td><?php echo $row["FilePath"]; ?></td>
                         <td><?php echo $row["UploadDate"]; ?></td>
 
-                        <td style="display: flex; justify-content: flex-end;gap: 10px">
+                        <td style="display: flex;gap: 10px">
                             <a href="" type="button" class="btn btn-secondary">Edit</a>
                             <a href="" type="button" class="btn btn-secondary">Details</a>
                             <a href="" type="button" class="btn btn-success">Analytics</a>
                             <a href="delete_content.php?id=<?php echo $row["ContentID"]; ?>" class="btn btn-danger">Delete</a>
                         </td>
-
-                        <!-- Add more columns as needed -->
                     </tr>
                 <?php endwhile; ?>
             </tbody>
