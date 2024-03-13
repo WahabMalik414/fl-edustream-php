@@ -40,8 +40,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </nav>
   <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Educator module.</h1>
   <p>
+    <a href="profile-management.php" class="btn btn-success">Profile management</a>
 
-    <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+    <a href="reset-password.php" class="btn btn-warning ml-3">Reset Your Password</a>
     <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 
   </p>
