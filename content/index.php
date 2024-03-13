@@ -49,7 +49,7 @@ mysqli_close($link);
                 <a class="nav-item nav-link" href="#">Content</a>
                 <a class="nav-item nav-link" href="#">Feedback</a>
                 <a class="nav-item nav-link" href="#">Analytics</a>
-                <a class="nav-item nav-link" href="#">Query</a>
+                <a class="nav-item nav-link" href="../query/">Query</a>
 
             </div>
         </div>

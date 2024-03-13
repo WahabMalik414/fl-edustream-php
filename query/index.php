@@ -46,7 +46,7 @@ mysqli_close($link);
         <div class="collapse navbar-collapse " style="gap:10px; justify-content: center;" id="navbarNavAltMarkup">
             <div class="navbar-nav" style="gap:20px;">
                 <a class="nav-item nav-link active" href="../index.php">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="content.php">Content</a>
+                <a class="nav-item nav-link" href="../content/">Content</a>
                 <a class="nav-item nav-link" href="#">Feedback</a>
                 <a class="nav-item nav-link" href="#">Analytics</a>
                 <a class="nav-item nav-link" href="#">Query</a>
