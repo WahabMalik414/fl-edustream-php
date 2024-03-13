@@ -32,7 +32,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a class="nav-item nav-link" href="./content/">Content</a>
         <a class="nav-item nav-link" href="#">Feedback</a>
         <a class="nav-item nav-link" href="#">Analytics</a>
-        <a class="nav-item nav-link" href="#">Query</a>
+        <a class="nav-item nav-link" href="./query/">Query</a>
         <a class="nav-item nav-link" href="#">Profile</a>
 
       </div>
