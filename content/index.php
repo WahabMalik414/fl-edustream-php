@@ -42,18 +42,22 @@ mysqli_close($link);
 </head>
 
 <body>
-    <div class="container">
-        <nav class="display-4 navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse " style="gap:10px; justify-content: center;" id="navbarNavAltMarkup">
-                <div class="navbar-nav" style="gap:20px;">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="./content/">Content</a>
-                    <a class="nav-item nav-link" href="#">Feedback</a>
-                    <a class="nav-item nav-link" href="#">Analytics</a>
-                </div>
+    <nav class="display-4 navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse " style="gap:10px; justify-content: center;" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="gap:20px;">
+                <a class="nav-item nav-link active" href="../index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Content</a>
+                <a class="nav-item nav-link" href="#">Feedback</a>
+                <a class="nav-item nav-link" href="#">Analytics</a>
+                <a class="nav-item nav-link" href="#">Query</a>
+
             </div>
-        </nav>
-        <h2 class="mt-5 text-center mb-5">Content Uploaded by You</h2>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h2 class="mt-5 text-center mb-5">Content Uploaded by <b><?php echo ($_SESSION["username"]); ?></b></h2>
+        <a type="button" class="btn btn-primary mb-3" href="./create_content.php">Upload new</a>
         <table class="table">
             <thead>
                 <tr>
@@ -70,8 +74,8 @@ mysqli_close($link);
                         <td><?php echo $row["UploadDate"]; ?></td>
 
                         <td style="display: flex;gap: 10px">
-                            <a href="" type="button" class="btn btn-secondary">Edit</a>
-                            <a href="" type="button" class="btn btn-secondary">Details</a>
+                            <a href="edit_content.php?id=<?php echo $row["ContentID"]; ?>" type="button" class="btn btn-secondary">Edit</a>
+                            <a href="details_content.php?id=<?php echo $row["ContentID"]; ?>" type="button" class="btn btn-secondary">Details</a>
                             <a href="" type="button" class="btn btn-success">Analytics</a>
                             <a href="delete_content.php?id=<?php echo $row["ContentID"]; ?>" class="btn btn-danger">Delete</a>
                         </td>

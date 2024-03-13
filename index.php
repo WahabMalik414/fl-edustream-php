@@ -32,6 +32,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <a class="nav-item nav-link" href="./content/">Content</a>
         <a class="nav-item nav-link" href="#">Feedback</a>
         <a class="nav-item nav-link" href="#">Analytics</a>
+        <a class="nav-item nav-link" href="#">Query</a>
+        <a class="nav-item nav-link" href="#">Profile</a>
+
       </div>
     </div>
   </nav>
@@ -40,6 +43,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
     <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+
   </p>
 </body>
 

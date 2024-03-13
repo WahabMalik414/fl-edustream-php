@@ -75,17 +75,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="container">
-        <nav class="display-4 navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse " style="gap:10px; justify-content: center;" id="navbarNavAltMarkup">
-                <div class="navbar-nav" style="gap:20px;">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="../content/">Content</a>
-                    <a class="nav-item nav-link" href="#">Feedback</a>
-                    <a class="nav-item nav-link" href="#">Analytics</a>
-                </div>
+    <nav class="display-4 navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse " style="gap:10px; justify-content: center;" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="gap:20px;">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="../content/">Content</a>
+                <a class="nav-item nav-link" href="#">Feedback</a>
+                <a class="nav-item nav-link" href="#">Query</a>
+                <a class="nav-item nav-link" href="#">Analytics</a>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="container">
+
         <h2>Upload Content</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
             <div class="form-group <?php echo (!empty($description_err)) ? 'has-error' : ''; ?>">
